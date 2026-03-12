@@ -49,11 +49,6 @@ implementacionapi
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/a3b568d7-275e-4a41-9d21-16fc68ba2963" />
 
-### Respuesta en Postman
-
-<img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/c5cc41da-6ed6-4981-9be2-dc1fef56dc15" />
-
----
 
 # ▶️ Cómo ejecutar el proyecto
 
