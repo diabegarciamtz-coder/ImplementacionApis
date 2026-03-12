@@ -42,7 +42,8 @@ implementacionapi
 
 ### GET /users/<id>
 
-<img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/4795d281-e362-401a-beed-f863b1c22fcb" />
+<img width="1481" height="766" alt="image" src="https://github.com/user-attachments/assets/b8e439e2-7f16-4ff8-a87f-08874e6efb5e" />
+
 
 ### POST /users
 
