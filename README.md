@@ -1,26 +1,28 @@
-# Simple Flask API 🚀
+# 🚀 Simple Flask API
 
-Pequeña API desarrollada con **Python** usando el framework **:contentReference[oaicite:0]{index=0}** para practicar la creación de endpoints y probar peticiones HTTP con **:contentReference[oaicite:1]{index=1}**.
+Pequeña **API REST** desarrollada con **Python** utilizando el framework **Flask** para practicar la creación de endpoints y probar peticiones HTTP con **Postman**.
 
 ---
 
 ## 📌 Descripción
 
-Este proyecto implementa una API básica que permite:
+Este proyecto implementa una API básica que permite realizar operaciones simples sobre usuarios.  
+Fue desarrollado como práctica para comprender el funcionamiento de una **API REST**, el manejo de **peticiones HTTP** y el intercambio de datos en **formato JSON**.
 
-- Obtener información de un usuario por su **ID**
-- Crear un usuario enviando datos en **JSON**
-- Probar endpoints utilizando herramientas de testing de APIs
+La API permite:
 
-Es un proyecto pequeño pensado para practicar el funcionamiento básico de una API REST.
+- 🔎 Obtener información de un usuario por su **ID**
+- ➕ Crear un usuario enviando datos en **JSON**
+- 🧪 Probar endpoints mediante herramientas de testing de APIs
 
 ---
 
 ## 🛠 Tecnologías utilizadas
 
-- Python 3
-- Flask
-- Postman
+- **Python 3**
+- **Flask**
+- **Postman**
+- **JSON**
 
 ---
 
@@ -29,63 +31,82 @@ Es un proyecto pequeño pensado para practicar el funcionamiento básico de una 
 ```
 implementacionapi
 │
-├── main.py
-├── README.md
-└── venv/   (entorno virtual - no se sube al repositorio)
+├── main.py          # Archivo principal donde se define la API
+├── README.md        # Documentación del proyecto
+└── venv/            # Entorno virtual (no se sube al repositorio)
 ```
 
+---
 
-### Respuesta de la API
+## 🖼 Ejemplo de respuestas de la API
+
+### GET /users/<id>
 
 <img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/4795d281-e362-401a-beed-f863b1c22fcb" />
+
+### POST /users
+
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/a3b568d7-275e-4a41-9d21-16fc68ba2963" />
+
+### Respuesta en Postman
+
 <img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/c5cc41da-6ed6-4981-9be2-dc1fef56dc15" />
 
 ---
 
-## ▶️ Cómo ejecutar el proyecto
+# ▶️ Cómo ejecutar el proyecto
 
-### 1. Clonar el repositorio
+## 1️⃣ Clonar el repositorio
 
-```
+```bash
 git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
 ```
 
-### 2. Entrar a la carpeta del proyecto
+---
 
-```
+## 2️⃣ Entrar a la carpeta del proyecto
+
+```bash
 cd implementacionapi
 ```
 
-### 3. Crear entorno virtual
+---
 
-```
+## 3️⃣ Crear un entorno virtual
+
+```bash
 python -m venv venv
 ```
 
-### 4. Activar entorno virtual
+---
 
-Windows (PowerShell)
+## 4️⃣ Activar el entorno virtual
 
-```
+### Windows (PowerShell)
+
+```bash
 .\venv\Scripts\Activate.ps1
 ```
 
-Linux / Mac
+### Linux / Mac
 
-```
+```bash
 source venv/bin/activate
 ```
 
-### 5. Instalar dependencias
+---
 
-```
+## 5️⃣ Instalar dependencias
+
+```bash
 pip install flask
 ```
 
-### 6. Ejecutar la aplicación
+---
 
-```
+## 6️⃣ Ejecutar la aplicación
+
+```bash
 python main.py
 ```
 
@@ -97,29 +118,31 @@ http://127.0.0.1:5000
 
 ---
 
-## 🔗 Endpoints disponibles
+# 🔗 Endpoints disponibles
 
-### GET /users/<user_id>
+## 📥 GET /users/<user_id>
 
-Obtiene un usuario por su ID.
+Obtiene la información de un usuario mediante su **ID**.
 
-Ejemplo:
+### Ejemplo de petición
 
 ```
 GET http://127.0.0.1:5000/users/20
 ```
 
-Respuesta:
+### Respuesta
 
 ```json
 {
-"id": "20",
-"name": "test",
-"telefono": "999-666-333"
+  "id": "20",
+  "name": "test",
+  "telefono": "999-666-333"
 }
 ```
 
-También permite query params:
+### Query parameters opcionales
+
+También es posible enviar parámetros en la URL:
 
 ```
 GET /users/20?query=test
@@ -127,57 +150,69 @@ GET /users/20?query=test
 
 ---
 
-### POST /users
+## 📤 POST /users
 
-Crea un usuario enviando datos en formato JSON.
+Permite **crear un nuevo usuario** enviando datos en formato **JSON**.
 
-Ejemplo de request en Postman:
+### Ejemplo de petición
 
 ```
 POST http://127.0.0.1:5000/users
 ```
 
-Body:
+### Body (JSON)
 
 ```json
 {
-"id": "20",
-"name": "Brenda",
-"telefono": "418-114-9982"
+  "id": "20",
+  "name": "Diana",
+  "telefono": "418-107-3293"
 }
 ```
 
-Respuesta:
+### Respuesta
 
 ```json
 {
-"id": "20",
-"name": "Brenda",
-"telefono": "418-114-9982",
-"status": "user created"
+  "id": "20",
+  "name": "Diana",
+  "telefono": "418-107-3293",
+  "status": "user created"
 }
 ```
 
 ---
 
-## 🧪 Pruebas
+# 🧪 Pruebas
 
-Los endpoints fueron probados usando **Postman** enviando peticiones HTTP **GET** y **POST**.
+Los endpoints fueron probados utilizando **Postman**, enviando peticiones HTTP de tipo:
 
----
+- **GET** → para obtener información
+- **POST** → para crear nuevos usuarios
 
-## 📚 Aprendizaje del ejercicio
-
-Este ejercicio tuve como objetivo entender los fundamentos de cómo funciona una **API REST** utilizando **Python y Flask**. 
-A través de la creación de endpoints practiqué con  la definición de rutas, el uso de
-*query parameters*, la recepción de datos en formato **JSON** mediante peticiones **POST**, y el envío de respuestas en formato
-JSON desde el servidor. Además, se utilizó **:contentReference[oaicite:0]{index=0}** para probar las peticiones HTTP y verificar el
-funcionamiento de la API desarrollada con **:contentReference[oaicite:1]{index=1}**.
-
-## 📄 Licencia
+Esto permitió verificar que la API responde correctamente y que los datos se procesan adecuadamente.
 
 ---
 
-Este proyecto es solo para fines educativos y de práctica.
-Brenda Edith Grifaldo Delgadillo
-UTNG®
+# 📚 Aprendizaje del ejercicio
+
+Este proyecto tuvo como objetivo comprender los **fundamentos de las APIs REST** utilizando **Python y Flask**.
+
+Durante el desarrollo se practicó:
+
+- Definición de **rutas (endpoints)**
+- Uso de **métodos HTTP**
+- Manejo de **query parameters**
+- Recepción de datos en **JSON**
+- Envío de respuestas desde el servidor en formato **JSON**
+- Pruebas de endpoints utilizando **Postman**
+
+---
+
+# 📄 Licencia
+
+Este proyecto fue desarrollado **con fines educativos y de práctica**.
+
+**Autora:**  
+Diana Mabel Garcia Martinez  
+Universidad Tecnológica del Norte de Guanajuato (UTNG)
